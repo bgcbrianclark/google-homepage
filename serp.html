@@ -3,8 +3,123 @@
 <html>
 <head>
   <title>SERP - Google Search</title>
+  <style>
+  	:root {
+  		font-size: 16px;
+  	}
+  	* {
+  		box-sizing: border-box;
+  	}
+  	body {
+  		font-family: arial, sans-serif;
+  		margin: 0;
+  		padding: 2rem 1rem;
+  		height: 100vh;
+  		width: 100%;
+  	}
+  	nav {
+  		align-items: center;
+  		display: flex;
+  		font-size: small;
+  		justify-content: space-between;
+  		left: 0;
+  		padding: 1.5rem;
+  		position: absolute;
+  		right: 0;
+  		top:0;
+  		width: 100%;
+  	}
+  	nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+  	}
+  	nav ul li {
+  		display: inline-block;
+  	}
+  	nav ul li:not(:last-child) {
+  		margin-right: 1rem;
+  	}
+		nav ul li a {
+			opacity: .75;
+		}
+  	.search {
+  		align-items: center;
+  		display: flex;
+  		flex-direction: column;
+  		height: 100%;
+  		padding-top: 165px;
+  		position: relative;
+  		width: 100%;
+  	}
+  	.search form {
+  		width: 1139px;
+  		padding: 0 284px;
+  	}
+  	.search img {
+  		display: block;
+  		margin: 0 auto 25px;
+  	}
+		.search form input[type="text"] {
+			border-radius: 2px;
+			border-width: 1px;
+	    border-top: 1px solid rgba(0,0,0,.1);
+	    border-left: 1px solid rgba(0,0,0,.1);
+			box-shadow: 0 2px 8px rgba(0,0,0,.25);
+			height: 44px;
+			margin-bottom: 1.5rem;
+			width: 100%;
+		}
+		.search form .input-group {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+		}
+		.search form .input-group input {
+			background-color: #f2f2f2;
+			border: none;
+			color: #757575;
+			font-weight: bold;
+			height: 36px;
+			margin: 11px 4px;
+			padding: 0 16px;
+		}
+		.search a {
+			color: #1a0dab;
+			font-size: small;
+			text-decoration: none;
+		}
+  </style>
 </head>
 <body>
+	<nav>
+		<div class="left">
+			<ul>
+				<li>About</li>
+				<li>Store</li>
+			</ul>
+		</div>
+		<div class="right">
+			<ul>
+				<li>Gmail</li>
+				<li>Images</li>
+				<li>Menu</li>
+				<li>Notifications</li>
+				<li>Account</li>
+			</ul>
+		</div>
+	</nav>
 
+	<section class="search">
+		<img src="img/google-logo.png" alt="google logo" />
+		<form action="get">
+			<input type="text">
+			<div class="input-group">
+				<input type="submit" value="Google Search">
+				<input type="submit" value="I'm Feeling Lucky">
+			</div>
+		</form>
+		<a href="#">Explore the world's iconic locations in 3D</a>
+	</section>
 </body>
 </html>
